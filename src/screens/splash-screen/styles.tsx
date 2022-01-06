@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { flicker } from 'mainStyles';
 
 export const Container = styled.div`
   height: 100%;
@@ -12,12 +11,9 @@ export const LogoContainer = styled.div`
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
-`;
-
-export const Logo = styled.img`
-  width: 400px;
-  animation: ${flicker} 2s infinite ease-in;
+  justify-content: flex-start;
+  overflow: hidden;
+  max-width: 400px;
 
   @media (max-width: ${({ theme }) => theme.widthTablet}) {
     width: 300px;

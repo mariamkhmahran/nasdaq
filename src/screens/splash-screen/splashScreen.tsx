@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from 'assets/nasdaq-logo.svg';
-import { Container, Footer, Logo, LogoContainer, Text } from './styles';
+import Logo from 'components/logo';
+import { Container, Footer, LogoContainer, Text } from './styles';
 
 export const SplashScreen: React.FC = () => (
   <Container>
     <LogoContainer>
-      <Logo src={logo} />
+      <Logo />
     </LogoContainer>
     <Footer>
       <Text>By</Text>
