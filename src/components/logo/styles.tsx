@@ -17,7 +17,7 @@ const startup = keyframes`
 `;
 
 export const Path = styled.path`
-  fill: #fff;
-  stroke: #fff;
+  fill: ${({ theme }) => theme.primaryWhite};
+  stroke: ${({ theme }) => theme.primaryWhite};
   animation: ${startup} 1.5s ease-in;
 `;

@@ -6,6 +6,14 @@ export const AppContainer = styled.div`
   background-color: ${({ theme }) => theme.primaryBlue};
   overflow-x: hidden;
   overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+  }
 `;
 
 export const flicker = keyframes`
