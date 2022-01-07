@@ -5,14 +5,16 @@ import { useActions, useAppState } from 'overmind-state';
 import AppRoutes from 'Routes';
 
 const App: React.FC = () => {
-  const { isLoading } = useAppState();
-  const { setIsLoading } = useActions();
+  const { onSplashScreen } = useAppState();
+  const { setOnSplashScreen } = useActions();
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 3000);
+    setTimeout(() => {
+      setOnSplashScreen(false);
+    }, 3000);
   }, []);
 
-  return <AppContainer>{isLoading ? <SplashScreen /> : <AppRoutes />}</AppContainer>;
+  return <AppContainer>{onSplashScreen ? <SplashScreen /> : <AppRoutes />}</AppContainer>;
 };
 
 export default App;

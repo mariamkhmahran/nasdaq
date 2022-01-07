@@ -3,32 +3,39 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 40px;
-
-  @media (max-width: ${({ theme }) => theme.widthTablet}) {
-    padding: 20px;
-  }
 `;
 
 export const Header = styled.div`
+  padding: 10px 40px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+
+  @media (max-width: ${({ theme }) => theme.widthTablet}) {
+    padding: 25px 15px 10px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.widthMobile}) {
+    position: sticky;
+    top: 0;
+    background-color: ${({ theme }) => theme.primaryBlueDark};
+  }
 `;
 
 export const Title = styled.div`
   font-size: ${({ theme }) => theme.fontSizeXL};
   color: ${({ theme }) => theme.primaryWhite};
   font-family: ${({ theme }) => theme.fonts.bold};
+  line-height: 1;
 
   @media (max-width: ${({ theme }) => theme.widthTablet}) {
     font-size: ${({ theme }) => theme.fontSizeExtraLarge};
   }
 
   @media (max-width: ${({ theme }) => theme.widthMobile}) {
-    font-size: ${({ theme }) => theme.fontSizeLarge};
+    display: none;
   }
 `;
 
@@ -40,7 +47,8 @@ export const SearchBar = styled.div`
   width: 40%;
 
   @media (max-width: ${({ theme }) => theme.widthTablet}) {
-    flex-grow: 1;
+    height: 30px;
+    width: 100%;
   }
 `;
 
@@ -55,6 +63,10 @@ export const Icon = styled.div`
   align-items: center;
   justify-content: center;
   color: ${({ theme }) => theme.primaryWhite};
+
+  @media (max-width: ${({ theme }) => theme.widthTablet}) {
+    font-size: ${({ theme }) => theme.fontSizeExtraSmall};
+  }
 `;
 
 export const Input = styled.input`
@@ -73,5 +85,18 @@ export const Input = styled.input`
   ::placeholder {
     color: ${({ theme }) => theme.primaryWhite};
     opacity: 1;
+  }
+
+  @media (max-width: ${({ theme }) => theme.widthTablet}) {
+    font-size: ${({ theme }) => theme.fontSizeExtraSmall};
+    padding-left: 5px;
+  }
+`;
+
+export const TableContainer = styled.div`
+  padding: 0px 40px;
+
+  @media (max-width: ${({ theme }) => theme.widthTablet}) {
+    padding: 0px 15px;
   }
 `;

@@ -1,24 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import { Ticker } from 'types/types';
-import { useActions } from 'overmind-state';
+import React, { useEffect } from 'react';
+import { useActions, useAppState } from 'overmind-state';
 
-import { Container, Header, Icon, Input, SearchBar, Title } from './styles';
+import {
+  Container,
+  Header,
+  Icon,
+  Input,
+  SearchBar,
+  Title,
+  TableContainer,
+} from './styles';
+import TickersTable from 'components/tickers-table';
 
 export const ExploreScreen: React.FC = () => {
-  const [tickers, settickers] = useState<Ticker[]>();
+  const { tickers } = useAppState();
   const { loadTickers } = useActions();
 
   useEffect(() => {
+    //TODO: handle error
+    getNext();
+  }, []);
+
+  const getNext = () =>
     loadTickers({
       active: true,
       sort: 'ticker',
       order: 'asc',
       limit: 10,
-    }).then(({ success, data }) => {
-      //TODO: handle error
-      if (success) settickers(data);
     });
-  }, []);
 
   return (
     <Container>
@@ -31,6 +40,9 @@ export const ExploreScreen: React.FC = () => {
           <Input placeholder="Search" />
         </SearchBar>
       </Header>
+      <TableContainer>
+        <TickersTable tickers={tickers} />
+      </TableContainer>
     </Container>
   );
 };

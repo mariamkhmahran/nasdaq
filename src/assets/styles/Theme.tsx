@@ -3,7 +3,9 @@ import { DefaultTheme } from 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     primaryBlue: string;
+    primaryBlueDark: string;
     primaryWhite: string;
+    primaryWhiteTrans: string;
 
     fonts: {
       extraLight: string;
@@ -26,7 +28,9 @@ declare module 'styled-components' {
 
 export const Theme: DefaultTheme = {
   primaryBlue: '#249CFF',
+  primaryBlueDark: '#2191ed',
   primaryWhite: '#FFFFFF',
+  primaryWhiteTrans: '#FFF4',
   fonts: {
     extraLight: 'TitilliumExtraLight',
     light: 'TitilliumLight',

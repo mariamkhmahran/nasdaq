@@ -3,7 +3,7 @@ import { Ticker, TickersResponse } from 'types/types';
 
 // state
 export type State = {
-  isLoading: boolean;
+  onSplashScreen: boolean;
   tickers: Ticker[];
   nextUrl: string | null;
 };
@@ -23,7 +23,7 @@ interface ActionResult {
   data?: any;
 }
 
-export type setIsLoading = (context: Context, loading: boolean) => void;
+export type setOnSplashScreen = (context: Context, loading: boolean) => void;
 
 export type loadTickers = (
   context: Context,

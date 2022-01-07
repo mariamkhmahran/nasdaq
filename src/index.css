@@ -1,7 +1,13 @@
 body {
   margin: 0;
-  font-family: 'TitilliumExtraLight', 'TitilliumLight', 'TitilliumRegular', 'TitilliumSemiBold',
-    'TitilliumBold';
+  font-family: 'TitilliumExtraLight', 'TitilliumLight', 'TitilliumRegular',
+    'TitilliumSemiBold', 'TitilliumBold';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 425px) {
+  .hide-on-small-screen {
+    display: none !important;
+  }
 }

@@ -1,7 +1,7 @@
 import * as Actions from './types';
 
-export const setIsLoading: Actions.setIsLoading = ({ state }, loading) => {
-  state.isLoading = loading;
+export const setOnSplashScreen: Actions.setOnSplashScreen = ({ state }, loading) => {
+  state.onSplashScreen = loading;
 };
 
 export const loadTickers: Actions.loadTickers = async (
