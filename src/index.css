@@ -6,6 +6,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
 @media (max-width: 425px) {
   .hide-on-small-screen {
     display: none !important;

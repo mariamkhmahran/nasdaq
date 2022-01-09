@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useActions, useAppState } from 'overmind-state';
 
 import {
@@ -13,6 +13,7 @@ import {
 import TickersTable from 'components/tickers-table';
 
 export const ExploreScreen: React.FC = () => {
+  const [sentRequest, setSentRequest] = useState(false);
   const { tickers } = useAppState();
   const { loadTickers } = useActions();
 
@@ -21,16 +22,25 @@ export const ExploreScreen: React.FC = () => {
     getNext();
   }, []);
 
-  const getNext = () =>
-    loadTickers({
+  const getNext = async () => {
+    setSentRequest(true);
+    await loadTickers({
       active: true,
       sort: 'ticker',
       order: 'asc',
-      limit: 10,
-    });
+      limit: 15,
+    }).finally(() => setSentRequest(false));
+  };
+
+  const onScroll: React.UIEventHandler<HTMLDivElement> = ({ currentTarget }) => {
+    const { scrollHeight, scrollTop, clientHeight } = currentTarget;
+    const bottomOfWindow = scrollHeight - scrollTop <= clientHeight + 50;
+
+    bottomOfWindow && !sentRequest && getNext();
+  };
 
   return (
-    <Container>
+    <Container onScroll={onScroll}>
       <Header>
         <Title>Stocks</Title>
         <SearchBar>

@@ -14,7 +14,7 @@ export const loadTickers: Actions.loadTickers = async (
 
     if (!!error || status !== 'OK' || !results) throw new Error(error);
 
-    state.tickers = results;
+    state.tickers = [...state.tickers, ...results];
     state.nextUrl = next_url || '';
 
     return { success: true, data: results };
