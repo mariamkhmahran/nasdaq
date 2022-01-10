@@ -3,10 +3,12 @@ import { Ticker } from 'types/types';
 import { Cell, Row } from '../styles';
 
 type TableRowProps = {
-  data: Ticker;
+  data?: Ticker;
 };
 
 export const TableRow: React.FC<TableRowProps> = ({ data }: TableRowProps) => {
+  if (!data) return <Row empty> No Results Found. </Row>;
+
   const { ticker, name, currency_name, primary_exchange } = data;
 
   return (

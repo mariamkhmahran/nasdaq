@@ -5,34 +5,45 @@ import { TableRow } from './components/row';
 import { LoadingRow } from './components/loadingRow';
 
 import { useAppState } from 'overmind-state';
-import { Ticker } from 'types/types';
 import { Container, SpinnerContainer } from './styles';
 
 type TickersTableProps = {
-  tickers: Ticker[];
+  loading?: boolean;
 };
 
 export const TickersTable: React.FC<TickersTableProps> = ({
-  tickers,
+  loading = false,
 }: TickersTableProps) => {
-  const { nextUrl } = useAppState();
+  const { allTickers, resultTickers, nextUrl, searchMode, searchNextUrl } = useAppState();
+  const tickers = searchMode ? resultTickers : allTickers;
+
+  const Content = () => {
+    const showLoading = loading || (!searchMode && !tickers.length);
+    if (showLoading)
+      return (
+        <SpinnerContainer>
+          <Spinner />
+        </SpinnerContainer>
+      );
+
+    if (searchMode && !tickers.length) return <TableRow />;
+
+    const hasMore = searchMode ? !!searchNextUrl : !!nextUrl;
+    return (
+      <Fragment>
+        {tickers.map((ticker) => (
+          <TableRow data={ticker} key={ticker.ticker} />
+        ))}
+
+        {hasMore && <LoadingRow />}
+      </Fragment>
+    );
+  };
 
   return (
     <Container>
       <Header />
-      {tickers.length ? (
-        <Fragment>
-          {tickers.map((ticker) => (
-            <TableRow data={ticker} key={ticker.ticker} />
-          ))}
-
-          {!!nextUrl && <LoadingRow />}
-        </Fragment>
-      ) : (
-        <SpinnerContainer>
-          <Spinner />
-        </SpinnerContainer>
-      )}
+      <Content />
     </Container>
   );
 };

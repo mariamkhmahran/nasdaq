@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useActions, useAppState } from 'overmind-state';
+import { useActions } from 'overmind-state';
+import TickersTable from 'components/tickers-table';
 
 import {
   Container,
@@ -10,26 +11,45 @@ import {
   Title,
   TableContainer,
 } from './styles';
-import TickersTable from 'components/tickers-table';
+import { QueryConfig } from 'overmind-state/types';
+
+const apiOptions: QueryConfig = {
+  active: true,
+  sort: 'ticker',
+  order: 'asc',
+  limit: 15,
+};
 
 export const ExploreScreen: React.FC = () => {
   const [sentRequest, setSentRequest] = useState(false);
-  const { tickers } = useAppState();
-  const { loadTickers } = useActions();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const { loadTickers, startSearch, stopSearch, searchTickers } = useActions();
 
   useEffect(() => {
     //TODO: handle error
     getNext();
   }, []);
 
+  useEffect(() => {
+    if (!searchTerm) stopSearch().then(() => setLoading(false));
+    else setLoading(true);
+
+    const delayDebounceFn = setTimeout(() => {
+      if (searchTerm) {
+        startSearch()
+          .then(() => searchTickers({ ...apiOptions, search: searchTerm }))
+          .finally(() => setLoading(false));
+      }
+    }, 1000);
+
+    return () => clearTimeout(delayDebounceFn);
+  }, [searchTerm]);
+
   const getNext = async () => {
     setSentRequest(true);
-    await loadTickers({
-      active: true,
-      sort: 'ticker',
-      order: 'asc',
-      limit: 15,
-    }).finally(() => setSentRequest(false));
+    await loadTickers(apiOptions).finally(() => setSentRequest(false));
   };
 
   const onScroll: React.UIEventHandler<HTMLDivElement> = ({ currentTarget }) => {
@@ -47,11 +67,15 @@ export const ExploreScreen: React.FC = () => {
           <Icon>
             <i className="fas fa-search" />
           </Icon>
-          <Input placeholder="Search" />
+          <Input
+            placeholder="Search"
+            onChange={({ target }) => setSearchTerm(target.value)}
+            value={searchTerm}
+          />
         </SearchBar>
       </Header>
       <TableContainer>
-        <TickersTable tickers={tickers} />
+        <TickersTable loading={loading} />
       </TableContainer>
     </Container>
   );

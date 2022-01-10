@@ -4,8 +4,11 @@ import { Ticker, TickersResponse } from 'types/types';
 // state
 export type State = {
   onSplashScreen: boolean;
-  tickers: Ticker[];
+  allTickers: Ticker[];
   nextUrl: string | null;
+  searchMode: boolean;
+  resultTickers: Ticker[];
+  searchNextUrl: string | null;
 };
 
 // effects
@@ -30,10 +33,15 @@ export type loadTickers = (
   options?: QueryConfig,
 ) => Promise<ActionResult & { data?: Ticker[] }>;
 
+export type startSearch = (context: Context) => Promise<void>;
+
+export type stopSearch = (context: Context) => Promise<void>;
+
 // types
 export interface QueryConfig {
   active?: boolean;
   sort?: string;
   order?: 'asc' | 'desc';
   limit?: number;
+  search?: string;
 }
