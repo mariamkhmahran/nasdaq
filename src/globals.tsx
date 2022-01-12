@@ -1,4 +1,4 @@
 export const PATHS = {
   exploreScreen: '/explore',
-  detailsScreen: '/details',
+  detailsScreen: '/details/:ticker',
 };

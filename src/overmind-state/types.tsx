@@ -1,5 +1,5 @@
 import { Context } from 'overmind-state';
-import { Ticker, TickersResponse } from 'types/types';
+import { Ticker, TickerDetails, TickersResponse } from 'types/types';
 
 // state
 export type State = {
@@ -9,6 +9,7 @@ export type State = {
   searchMode: boolean;
   resultTickers: Ticker[];
   searchNextUrl: string | null;
+  cache: { [ticker: string]: TickerDetails[] };
 };
 
 // effects
@@ -17,6 +18,7 @@ export type Api = {
     options: QueryConfig | undefined,
     url: string | null,
   ) => Promise<TickersResponse>;
+  getTickerDetails: (ticker: string) => Promise<TickersResponse>;
 };
 
 // actions
@@ -36,6 +38,11 @@ export type loadTickers = (
 export type startSearch = (context: Context) => Promise<void>;
 
 export type stopSearch = (context: Context) => Promise<void>;
+
+export type getTickerDetails = (
+  context: Context,
+  ticker: string,
+) => Promise<ActionResult & { data?: TickerDetails[] }>;
 
 // types
 export interface QueryConfig {

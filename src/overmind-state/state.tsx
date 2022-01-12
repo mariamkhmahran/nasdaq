@@ -7,4 +7,5 @@ export const state: State = {
   searchMode: false,
   resultTickers: [],
   searchNextUrl: null,
+  cache: {},
 };
