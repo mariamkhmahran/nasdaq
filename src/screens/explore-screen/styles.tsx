@@ -4,16 +4,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: scroll;
 `;
 
 export const Header = styled.div`
-  padding: 10px 40px;
+  padding: 30px 40px 10px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
 
   @media (max-width: ${({ theme }) => theme.widthTablet}) {
     padding: 25px 15px 10px;
@@ -27,16 +26,17 @@ export const Header = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: ${({ theme }) => theme.fontSizeXL};
+  font-size: ${({ theme }) => theme.fontSizeHeader};
   color: ${({ theme }) => theme.primaryWhite};
-  font-family: ${({ theme }) => theme.fonts.bold};
-  line-height: 1;
+  font-family: ${({ theme }) => theme.fonts.semiBold};
+  line-height: 0.7;
 
   @media (max-width: ${({ theme }) => theme.widthTablet}) {
     font-size: ${({ theme }) => theme.fontSizeExtraLarge};
   }
 
   @media (max-width: ${({ theme }) => theme.widthMobile}) {
+    font-size: ${({ theme }) => theme.fontSizeHeaderMobile};
     display: none;
   }
 `;
@@ -44,12 +44,17 @@ export const Title = styled.div`
 export const SearchBar = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   height: 40px;
   width: 40%;
+  margin-top: 3px;
 
   @media (max-width: ${({ theme }) => theme.widthTablet}) {
     height: 30px;
+    width: 60%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.widthMobile}) {
     width: 100%;
   }
 `;
@@ -90,13 +95,17 @@ export const Input = styled.input`
   }
 
   @media (max-width: ${({ theme }) => theme.widthTablet}) {
-    font-size: ${({ theme }) => theme.fontSizeExtraSmall};
+    font-size: ${({ theme }) => theme.fontSizeSmall};
     padding-left: 5px;
   }
 `;
 
 export const TableContainer = styled.div`
   padding: 0px 40px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: ${({ theme }) => theme.widthTablet}) {
     padding: 0px 15px;

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  flex-grow: 1;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -17,7 +19,7 @@ export const Row = styled.div<{ empty?: boolean }>`
   flex-direction: row;
   border-bottom: 1px solid ${({ theme }) => theme.primaryWhite};
   border-radius: 0px;
-  padding: 10px;
+  padding: 10px 0px;
   gap: 15px;
   cursor: ${({ empty }) => (empty ? 'default' : 'pointer')};
   color: ${({ theme }) => theme.primaryWhite};
@@ -29,7 +31,6 @@ export const Row = styled.div<{ empty?: boolean }>`
 
   &#header {
     border-top: 1px solid ${({ theme }) => theme.primaryWhite};
-    border-radius: 7px 7px 0px 0px;
     cursor: default;
 
     :hover {
@@ -52,7 +53,7 @@ export const Cell = styled.div<{
   font-family: ${({ theme, bold, header }) =>
     bold ? theme.fonts.bold : header ? theme.fonts.semiBold : theme.fonts.regular};
   color: ${({ theme }) => theme.primaryWhite};
-  font-size: ${({ theme }) => theme.fontSizeSmall};
+  font-size: ${({ theme }) => theme.fontSizeBody};
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -62,13 +63,18 @@ export const Cell = styled.div<{
     width: 100%;
     font-family: ${({ theme, bold }) => (bold ? theme.fonts.bold : theme.fonts.light)};
     font-size: ${({ theme, bold }) =>
-      bold ? theme.fontSizeSmall : theme.fontSizeExtraSmall};
+      bold ? theme.fontSizeBody : theme.fontSizeExtraSmall};
   }
 `;
 
 export const SpinnerContainer = styled.div`
-  height: calc(100vh - 240px);
+  flex-grow: 1;
+  flex-shrink: 0;
   background-color: ${({ theme }) => theme.primaryWhite}20;
+
+  @media (max-width: ${({ theme }) => theme.widthMobile}) {
+    margin: -19px -15px;
+  }
 `;
 
 export const LoaderContainer = styled.div`

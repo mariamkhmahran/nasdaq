@@ -14,11 +14,13 @@ declare module 'styled-components' {
       semiBold: string;
       bold: string;
     };
-    fontSizeXL: string;
-    fontSizeExtraLarge: string;
-    fontSizeExtraSmall: string;
+    fontSizeHeader: string;
+    fontSizeHeaderMobile: string;
+    fontSizeBody: string;
     fontSizeSmall: string;
+    fontSizeExtraSmall: string;
     fontSizeLarge: string;
+    fontSizeExtraLarge: string;
 
     widthFull: string;
     widthMobile: string;
@@ -38,11 +40,13 @@ export const Theme: DefaultTheme = {
     semiBold: 'TitilliumSemiBold',
     bold: 'TitilliumBold',
   },
-  fontSizeXL: '80px',
-  fontSizeExtraLarge: '40px',
-  fontSizeExtraSmall: '13px',
-  fontSizeSmall: '20px',
-  fontSizeLarge: '30px',
+  fontSizeHeader: '42pt',
+  fontSizeHeaderMobile: '34pt',
+  fontSizeBody: '14pt',
+  fontSizeSmall: '12pt',
+  fontSizeExtraSmall: '8pt',
+  fontSizeLarge: '20pt',
+  fontSizeExtraLarge: '28pt',
 
   widthTablet: '1024px',
   widthMobile: '425px',
