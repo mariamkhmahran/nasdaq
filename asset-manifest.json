@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.061eec9e.css",
+    "main.js": "/static/js/main.c2cf370b.js",
+    "index.html": "/index.html",
+    "static/media/nasdaq-white.svg": "/static/media/nasdaq-white.3d840557fa8ec5ad99053541b80851b9.svg",
+    "main.061eec9e.css.map": "/static/css/main.061eec9e.css.map",
+    "main.c2cf370b.js.map": "/static/js/main.c2cf370b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.061eec9e.css",
+    "static/js/main.c2cf370b.js"
+  ]
+}
