@@ -11,7 +11,7 @@ import App from './App';
 
 import './index.css';
 
-const overmind = createOvermind(config, { devtools: true });
+const overmind = createOvermind(config);
 
 ReactDOM.render(
   <React.StrictMode>

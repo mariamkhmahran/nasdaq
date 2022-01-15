@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 150px;
   height: 150px;
+  min-width: 150px;
+  min-height: 150px;
   border: 3px solid ${({ theme }) => theme.primaryWhite};
   border-radius: 50%;
   display: flex;

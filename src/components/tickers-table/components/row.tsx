@@ -15,7 +15,7 @@ export const TableRow: React.FC<TableRowProps> = ({ data }: TableRowProps) => {
   const { ticker, name, currency_name, primary_exchange } = data;
 
   return (
-    <Row onClick={() => navigate(`/details/${ticker}`)}>
+    <Row onClick={() => navigate(`/nasdaq/details/${ticker}`)}>
       <Cell bold>{ticker}</Cell>
       <Cell large>{name}</Cell>
       <Cell className="hide-on-small-screen">{currency_name}</Cell>

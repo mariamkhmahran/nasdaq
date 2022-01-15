@@ -15,7 +15,8 @@ const AppRoutes: React.FC = () => (
       <Route path={PATHS.detailsScreen} element={<DetailsScreen />} />
       <Route path={PATHS.errorScreen} element={<ErrorScreen />} />
       <Route path="/" element={<Navigate to={PATHS.exploreScreen} />} />
-      <Route path="/*" element={<NotFound />} />
+      <Route path="/nasdaq/" element={<Navigate to={PATHS.exploreScreen} />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </AnimatePresence>
 );

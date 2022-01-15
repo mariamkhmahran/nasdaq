@@ -1,5 +1,5 @@
 export const PATHS = {
-  exploreScreen: '/explore',
-  detailsScreen: '/details/:ticker',
-  errorScreen: '/something-went-wrong',
+  exploreScreen: '/nasdaq/explore',
+  detailsScreen: '/nasdaq/details/:ticker',
+  errorScreen: '/nasdaq/something-went-wrong',
 };
