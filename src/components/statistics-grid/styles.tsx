@@ -28,6 +28,8 @@ export const CellName = styled.div`
 `;
 
 export const CellValue = styled.div`
+  display: flex;
+  flex-direction: row;
   font-size: ${({ theme }) => theme.fontSizeExtraLarge};
   font-family: ${({ theme }) => theme.fonts.bold};
   line-height: 1;
@@ -40,4 +42,8 @@ export const CellValue = styled.div`
     font-family: ${({ theme }) => theme.fonts.semiBold};
     font-size: ${({ theme }) => theme.fontSizeBody};
   }
+`;
+
+export const Currency = styled.div`
+  font-size: ${({ theme }) => theme.fontSizeExtraSmall};
 `;
