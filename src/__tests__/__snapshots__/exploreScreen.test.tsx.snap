@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExploreScreen Renders Explore correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        style="opacity: 0;"
+      >
+        <div
+          class="sc-pVTFL jxHFLC"
+        >
+          <div
+            class="sc-jrQzAO cGLzBC"
+          >
+            <div
+              class="sc-gsDKAQ eobziP hide-on-small-screen"
+            >
+              Stocks
+            </div>
+            <div
+              class="sc-kDTinF hCMnpn"
+            >
+              <div
+                class="sc-iqseJM kwFBWE"
+              >
+                <i
+                  class="fas fa-search"
+                />
+              </div>
+              <input
+                class="sc-crHmcD gwOtKw"
+                placeholder="Search"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="sc-egiyK hcoHeJ"
+          >
+            <div
+              class="sc-eCImPb cBzCtZ"
+            >
+              <div
+                class="sc-jRQBWg iXnvuV hide-on-small-screen"
+                id="header"
+              >
+                <div
+                  class="sc-gKclnd WGZuk"
+                >
+                  Ticker
+                </div>
+                <div
+                  class="sc-gKclnd AJZsn"
+                >
+                  Name
+                </div>
+                <div
+                  class="sc-gKclnd WGZuk"
+                >
+                  Currency
+                </div>
+                <div
+                  class="sc-gKclnd WGZuk"
+                >
+                  Primary Exchange
+                </div>
+              </div>
+              <div
+                class="sc-iCfMLu beSOnu"
+              >
+                <div
+                  class="sc-dkPtRN eXCyaZ"
+                >
+                  <img
+                    class="sc-hKwDye dewtWg"
+                    size="10"
+                    src="nasdaq-white.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      style="opacity: 0;"
+    >
+      <div
+        class="sc-pVTFL jxHFLC"
+      >
+        <div
+          class="sc-jrQzAO cGLzBC"
+        >
+          <div
+            class="sc-gsDKAQ eobziP hide-on-small-screen"
+          >
+            Stocks
+          </div>
+          <div
+            class="sc-kDTinF hCMnpn"
+          >
+            <div
+              class="sc-iqseJM kwFBWE"
+            >
+              <i
+                class="fas fa-search"
+              />
+            </div>
+            <input
+              class="sc-crHmcD gwOtKw"
+              placeholder="Search"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="sc-egiyK hcoHeJ"
+        >
+          <div
+            class="sc-eCImPb cBzCtZ"
+          >
+            <div
+              class="sc-jRQBWg iXnvuV hide-on-small-screen"
+              id="header"
+            >
+              <div
+                class="sc-gKclnd WGZuk"
+              >
+                Ticker
+              </div>
+              <div
+                class="sc-gKclnd AJZsn"
+              >
+                Name
+              </div>
+              <div
+                class="sc-gKclnd WGZuk"
+              >
+                Currency
+              </div>
+              <div
+                class="sc-gKclnd WGZuk"
+              >
+                Primary Exchange
+              </div>
+            </div>
+            <div
+              class="sc-iCfMLu beSOnu"
+            >
+              <div
+                class="sc-dkPtRN eXCyaZ"
+              >
+                <img
+                  class="sc-hKwDye dewtWg"
+                  size="10"
+                  src="nasdaq-white.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

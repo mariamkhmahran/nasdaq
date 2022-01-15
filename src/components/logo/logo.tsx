@@ -5,7 +5,6 @@ export const Logo: React.FC = () => {
   const variants: Variants = {
     hidden: {
       pathLength: 0,
-      strokeWidth: '2',
       fill: 'rgba(255, 255, 255, 0)',
     },
     inbetween: {
@@ -16,7 +15,6 @@ export const Logo: React.FC = () => {
       },
     },
     visible: {
-      strokeWidth: '1',
       fill: 'rgba(255, 255, 255, 1)',
       transition: {
         delay: 1,
@@ -40,6 +38,7 @@ export const Logo: React.FC = () => {
         initial="hidden"
         animate={['inbetween', 'visible']}
         stroke="#fff"
+        strokeWidth="1"
         stroke-linejoin="round"
         stroke-linecap="round"
       />
@@ -50,6 +49,7 @@ export const Logo: React.FC = () => {
         initial="hidden"
         animate={['inbetween', 'visible']}
         stroke="#fff"
+        strokeWidth="1"
         stroke-linejoin="round"
         stroke-linecap="round"
       />
@@ -60,6 +60,7 @@ export const Logo: React.FC = () => {
         initial="hidden"
         animate={['inbetween', 'visible']}
         stroke="#fff"
+        strokeWidth="1"
         stroke-linejoin="round"
         stroke-linecap="round"
       />
@@ -70,6 +71,7 @@ export const Logo: React.FC = () => {
         initial="hidden"
         animate={['inbetween', 'visible']}
         stroke="#fff"
+        strokeWidth="1"
         stroke-linejoin="round"
         stroke-linecap="round"
       />
@@ -80,6 +82,7 @@ export const Logo: React.FC = () => {
         initial="hidden"
         animate={['inbetween', 'visible']}
         stroke="#fff"
+        strokeWidth="1"
         stroke-linejoin="round"
         stroke-linecap="round"
       />
@@ -90,6 +93,7 @@ export const Logo: React.FC = () => {
         initial="hidden"
         animate={['inbetween', 'visible']}
         stroke="#fff"
+        strokeWidth="1"
         stroke-linejoin="round"
         stroke-linecap="round"
       />
@@ -100,6 +104,7 @@ export const Logo: React.FC = () => {
         initial="hidden"
         animate={['inbetween', 'visible']}
         stroke="#fff"
+        strokeWidth="1"
         stroke-linejoin="round"
         stroke-linecap="round"
       />

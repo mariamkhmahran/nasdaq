@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`404 Screen Renders 404 page correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        style="opacity: 0; height: 100vh;"
+      >
+        <div
+          class="sc-bdvvtL cKGMAp"
+        >
+          <div
+            class="sc-gsDKAQ cCJDUu"
+          >
+            404
+          </div>
+          <div
+            class="sc-dkPtRN fEhLwK"
+          >
+            <div
+              class="sc-hKwDye eSuRMW"
+            >
+              Page
+            </div>
+            <div
+              class="sc-hKwDye eSuRMW"
+            >
+              <svg
+                data-name="logosandtypes com"
+                id="logosandtypes_com"
+                viewBox="0 0 150 150"
+                width="40px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M112.74,12.85h34.07L115.16,100a6.06,6.06,0,0,1-5.71,4H76v0a6.07,6.07,0,0,0,5.09-4Z"
+                  fill="rgba(255, 255, 255, 0)"
+                  pathLength="1"
+                  stroke="#fff"
+                  stroke-dasharray="0px 1px"
+                  stroke-dashoffset="0px"
+                  stroke-width="2"
+                />
+                <path
+                  d="M73.28,102.7A5.73,5.73,0,0,1,68,99.23L61.19,80.47l11.61-32a5.77,5.77,0,0,1,10.73-.31l6.79,18.68-11.61,32A5.73,5.73,0,0,1,73.28,102.7Z"
+                  fill="rgba(255, 255, 255, 0)"
+                  pathLength="1"
+                  stroke="#fff"
+                  stroke-dasharray="0px 1px"
+                  stroke-dashoffset="0px"
+                  stroke-width="2"
+                />
+                <path
+                  d="M75.75,43.33v0a6,6,0,0,0-5.45,4L38.65,134.5H4.58L36.23,47.33a6.07,6.07,0,0,1,5.7-4Z"
+                  fill="rgba(255, 255, 255, 0)"
+                  pathLength="1"
+                  stroke="#fff"
+                  stroke-dasharray="0px 1px"
+                  stroke-dashoffset="0px"
+                  stroke-width="2"
+                />
+              </svg>
+              ot
+            </div>
+            <div
+              class="sc-hKwDye eSuRMW"
+            >
+              Found
+            </div>
+          </div>
+          <div
+            class="sc-eCImPb bRQzrg"
+          >
+            Explore Stocks 
+            <i
+              class="fas fa-chevron-right"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      style="opacity: 0; height: 100vh;"
+    >
+      <div
+        class="sc-bdvvtL cKGMAp"
+      >
+        <div
+          class="sc-gsDKAQ cCJDUu"
+        >
+          404
+        </div>
+        <div
+          class="sc-dkPtRN fEhLwK"
+        >
+          <div
+            class="sc-hKwDye eSuRMW"
+          >
+            Page
+          </div>
+          <div
+            class="sc-hKwDye eSuRMW"
+          >
+            <svg
+              data-name="logosandtypes com"
+              id="logosandtypes_com"
+              viewBox="0 0 150 150"
+              width="40px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M112.74,12.85h34.07L115.16,100a6.06,6.06,0,0,1-5.71,4H76v0a6.07,6.07,0,0,0,5.09-4Z"
+                fill="rgba(255, 255, 255, 0)"
+                pathLength="1"
+                stroke="#fff"
+                stroke-dasharray="0px 1px"
+                stroke-dashoffset="0px"
+                stroke-width="2"
+              />
+              <path
+                d="M73.28,102.7A5.73,5.73,0,0,1,68,99.23L61.19,80.47l11.61-32a5.77,5.77,0,0,1,10.73-.31l6.79,18.68-11.61,32A5.73,5.73,0,0,1,73.28,102.7Z"
+                fill="rgba(255, 255, 255, 0)"
+                pathLength="1"
+                stroke="#fff"
+                stroke-dasharray="0px 1px"
+                stroke-dashoffset="0px"
+                stroke-width="2"
+              />
+              <path
+                d="M75.75,43.33v0a6,6,0,0,0-5.45,4L38.65,134.5H4.58L36.23,47.33a6.07,6.07,0,0,1,5.7-4Z"
+                fill="rgba(255, 255, 255, 0)"
+                pathLength="1"
+                stroke="#fff"
+                stroke-dasharray="0px 1px"
+                stroke-dashoffset="0px"
+                stroke-width="2"
+              />
+            </svg>
+            ot
+          </div>
+          <div
+            class="sc-hKwDye eSuRMW"
+          >
+            Found
+          </div>
+        </div>
+        <div
+          class="sc-eCImPb bRQzrg"
+        >
+          Explore Stocks 
+          <i
+            class="fas fa-chevron-right"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

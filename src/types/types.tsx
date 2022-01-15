@@ -23,22 +23,22 @@ export interface TickersResponse<T = never> {
 }
 
 export interface TickerDetails extends Ticker {
-  description: string;
-  homepage_url: string;
-  list_date: string;
-  market_cap: number;
-  phone_number: string;
-  share_class_shares_outstanding: number;
-  sic_code: string;
-  sic_description: string;
-  total_employees: number;
-  weighted_shares_outstanding: number;
-  address: {
+  description?: string;
+  homepage_url?: string;
+  list_date?: string;
+  market_cap?: number;
+  phone_number?: string;
+  share_class_shares_outstanding?: number;
+  sic_code?: string;
+  sic_description?: string;
+  total_employees?: number;
+  weighted_shares_outstanding?: number;
+  address?: {
     address1: string;
     city: string;
     state: string;
   };
-  branding: {
+  branding?: {
     icon_url: string;
     logo_url: string;
   };
