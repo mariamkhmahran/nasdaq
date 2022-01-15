@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
-import { useActions } from 'overmind-state';
+import { useActions, useAppState } from 'overmind-state';
 
 import TickersTable from 'components/tickers-table';
 import { PATHS } from '../../globals';
@@ -22,11 +22,12 @@ export const ExploreScreen: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const { allTickers } = useAppState();
   const { loadTickers, startSearch, stopSearch, searchTickers } = useActions();
   const navigate = useNavigate();
 
   useEffect(() => {
-    getNext();
+    !allTickers.length && getNext();
   }, []);
 
   useEffect(() => {

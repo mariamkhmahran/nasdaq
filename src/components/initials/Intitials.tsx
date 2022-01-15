@@ -3,7 +3,7 @@ import { Container, Logo } from './styles';
 
 type InitialsProps = {
   ticker: string;
-  logo: string;
+  logo?: string;
 };
 
 export const Initials: React.FC<InitialsProps> = ({ ticker, logo }: InitialsProps) => {

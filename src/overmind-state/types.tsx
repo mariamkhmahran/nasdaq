@@ -18,6 +18,7 @@ export type Get = <T>(
   query: string,
   config?: QueryConfig | undefined,
   version?: string,
+  useUrl?: boolean,
 ) => Promise<AxiosResponse<T>>;
 
 export type Api = {

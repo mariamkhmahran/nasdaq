@@ -19,18 +19,28 @@ const parseConfig = (config?: QueryConfig) => {
   return `?${params.join('&')}`;
 };
 
-const get: Get = (query: string, config?: QueryConfig, version = 'v3') => {
+const get: Get = (
+  query: string,
+  config?: QueryConfig,
+  version = 'v3',
+  useUrl = false,
+) => {
   const url = `https://api.polygon.io/${version}`;
   const options = parseConfig(config);
   const PATH = `${url}${query}${options}`;
   const headers = { Authorization };
 
-  return Axios.get(PATH, { headers });
+  return Axios.get(useUrl ? query : PATH, { headers });
 };
 
 export const api: Api = {
   getTickers: async (config = {}, url = '') => {
-    return get<TickersResponse<Ticker[]>>(url || `/reference/tickers`, url ? {} : config)
+    return get<TickersResponse<Ticker[]>>(
+      url || `/reference/tickers`,
+      url ? {} : config,
+      'v3',
+      !!url,
+    )
       .then((response) => response.data)
       .catch((err: Error | AxiosError) => {
         const message = Axios.isAxiosError(err) ? err.response?.data.error : err.message;
