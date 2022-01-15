@@ -13,11 +13,11 @@ export interface Ticker {
   type: string;
 }
 
-export interface TickersResponse {
+export interface TickersResponse<T = never> {
   count?: number;
   next_url?: string;
   request_id?: string;
-  results?: Ticker[] | TickerDetails[];
+  results?: T;
   error?: string;
   status: 'OK' | 'ERROR';
 }
@@ -43,3 +43,34 @@ export interface TickerDetails extends Ticker {
     logo_url: string;
   };
 }
+
+export interface OpenClose {
+  close: number;
+  high: number;
+  low: number;
+  open: number;
+  volume: number;
+  status: string;
+  symbol: string;
+}
+
+export interface PrevClose {
+  adjusted: boolean;
+  queryCount: number;
+  request_id: string;
+  results: {
+    T: string;
+    c: number;
+    h: number;
+    l: number;
+    o: number;
+    t: number;
+    v: number;
+    vw: number;
+  }[];
+  resultsCount: 1;
+  status: string;
+  ticker: string;
+}
+
+export type TickerData = TickerDetails & OpenClose;

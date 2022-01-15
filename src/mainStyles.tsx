@@ -4,6 +4,7 @@ export const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${({ theme }) => theme.primaryBlue};
+  color: ${({ theme }) => theme.primaryWhite};
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -25,5 +26,21 @@ export const flicker = keyframes`
   }
   100% {
     opacity: 1;
+  }
+`;
+
+export const PageTitle = styled.div`
+  font-size: ${({ theme }) => theme.fontSizeHeader};
+  color: ${({ theme }) => theme.primaryWhite};
+  font-family: ${({ theme }) => theme.fonts.semiBold};
+  line-height: 0.75;
+
+  @media (max-width: ${({ theme }) => theme.widthTablet}) {
+    font-size: ${({ theme }) => theme.fontSizeExtraLarge};
+  }
+
+  @media (max-width: ${({ theme }) => theme.widthMobile}) {
+    font-size: ${({ theme }) => theme.fontSizeHeaderMobile};
+    display: none;
   }
 `;

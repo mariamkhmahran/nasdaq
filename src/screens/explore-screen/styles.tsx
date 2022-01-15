@@ -25,22 +25,6 @@ export const Header = styled.div`
   }
 `;
 
-export const Title = styled.div`
-  font-size: ${({ theme }) => theme.fontSizeHeader};
-  color: ${({ theme }) => theme.primaryWhite};
-  font-family: ${({ theme }) => theme.fonts.semiBold};
-  line-height: 0.7;
-
-  @media (max-width: ${({ theme }) => theme.widthTablet}) {
-    font-size: ${({ theme }) => theme.fontSizeExtraLarge};
-  }
-
-  @media (max-width: ${({ theme }) => theme.widthMobile}) {
-    font-size: ${({ theme }) => theme.fontSizeHeaderMobile};
-    display: none;
-  }
-`;
-
 export const SearchBar = styled.div`
   display: flex;
   flex-direction: row;

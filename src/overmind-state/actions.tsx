@@ -1,4 +1,3 @@
-import { TickerDetails } from 'types/types';
 import * as Actions from './types';
 
 export const setOnSplashScreen: Actions.setOnSplashScreen = ({ state }, loading) => {
@@ -55,7 +54,7 @@ export const searchTickers: Actions.loadTickers = async (
   }
 };
 
-export const getTickerDetails: Actions.getTickerDetails = async (
+export const getTickerData: Actions.getTickerData = async (
   { state, effects },
   ticker,
 ) => {
@@ -69,9 +68,9 @@ export const getTickerDetails: Actions.getTickerDetails = async (
 
     if (!!error || status !== 'OK' || !results) throw new Error(error);
 
-    state.cache[ticker] = results as TickerDetails[];
+    state.cache[ticker] = results;
 
-    return { success: true, data: results as TickerDetails[] };
+    return { success: true, data: results };
   } catch (err) {
     const message = (err as Error).message || 'Error loading results.';
     return { success: false, error: message };

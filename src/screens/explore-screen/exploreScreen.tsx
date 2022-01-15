@@ -2,15 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useActions } from 'overmind-state';
 import TickersTable from 'components/tickers-table';
 
-import {
-  Container,
-  Header,
-  Icon,
-  Input,
-  SearchBar,
-  Title,
-  TableContainer,
-} from './styles';
+import { Container, Header, Icon, Input, SearchBar, TableContainer } from './styles';
+import { PageTitle } from 'mainStyles';
 import { QueryConfig } from 'overmind-state/types';
 
 const apiOptions: QueryConfig = {
@@ -62,7 +55,7 @@ export const ExploreScreen: React.FC = () => {
   return (
     <Container onScroll={onScroll}>
       <Header>
-        <Title>Stocks</Title>
+        <PageTitle>Stocks</PageTitle>
         <SearchBar>
           <Icon>
             <i className="fas fa-search" />
