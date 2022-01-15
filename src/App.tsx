@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import { AppContainer } from 'mainStyles';
-import { SplashScreen } from 'screens/splash-screen/splashScreen';
 import { useActions, useAppState } from 'overmind-state';
+
 import AppRoutes from 'Routes';
+import { SplashScreen } from 'screens/splash-screen/splashScreen';
+
+import { AppContainer } from 'mainStyles';
 
 const App: React.FC = () => {
   const { onSplashScreen } = useAppState();

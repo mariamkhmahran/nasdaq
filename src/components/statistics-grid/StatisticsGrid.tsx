@@ -12,23 +12,23 @@ export const StatisticsGrid: React.FC<StatisticsGridProps> = ({
   <Container>
     <Cell>
       <CellName>Open</CellName>
-      <CellValue>{open}</CellValue>
+      <CellValue>{open || 'n/a'}</CellValue>
     </Cell>
     <Cell>
       <CellName>Close</CellName>
-      <CellValue>{close}</CellValue>
+      <CellValue>{close || 'n/a'}</CellValue>
     </Cell>
     <Cell>
       <CellName>High</CellName>
-      <CellValue>{high}</CellValue>
+      <CellValue>{high || 'n/a'}</CellValue>
     </Cell>
     <Cell>
       <CellName>Low</CellName>
-      <CellValue>{low}</CellValue>
+      <CellValue>{low || 'n/a'}</CellValue>
     </Cell>
     <Cell>
       <CellName>Volume</CellName>
-      <CellValue>{volume}</CellValue>
+      <CellValue>{volume || 'n/a'}</CellValue>
     </Cell>
   </Container>
 );

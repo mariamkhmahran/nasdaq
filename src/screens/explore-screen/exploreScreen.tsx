@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
+import { motion } from 'framer-motion';
 import { useActions } from 'overmind-state';
+
 import TickersTable from 'components/tickers-table';
+import { PATHS } from '../../globals';
 
 import { Container, Header, Icon, Input, SearchBar, TableContainer } from './styles';
 import { PageTitle } from 'mainStyles';
@@ -19,9 +23,9 @@ export const ExploreScreen: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
   const { loadTickers, startSearch, stopSearch, searchTickers } = useActions();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    //TODO: handle error
     getNext();
   }, []);
 
@@ -42,7 +46,11 @@ export const ExploreScreen: React.FC = () => {
 
   const getNext = async () => {
     setSentRequest(true);
-    await loadTickers(apiOptions).finally(() => setSentRequest(false));
+    await loadTickers(apiOptions)
+      .then(({ error }) => {
+        if (error) navigate(PATHS.errorScreen);
+      })
+      .finally(() => setSentRequest(false));
   };
 
   const onScroll: React.UIEventHandler<HTMLDivElement> = ({ currentTarget }) => {
@@ -53,23 +61,29 @@ export const ExploreScreen: React.FC = () => {
   };
 
   return (
-    <Container onScroll={onScroll}>
-      <Header>
-        <PageTitle className="hide-on-small-screen">Stocks</PageTitle>
-        <SearchBar>
-          <Icon>
-            <i className="fas fa-search" />
-          </Icon>
-          <Input
-            placeholder="Search"
-            onChange={({ target }) => setSearchTerm(target.value)}
-            value={searchTerm}
-          />
-        </SearchBar>
-      </Header>
-      <TableContainer>
-        <TickersTable loading={loading} />
-      </TableContainer>
-    </Container>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ type: 'keyframes' }}
+    >
+      <Container onScroll={onScroll}>
+        <Header>
+          <PageTitle className="hide-on-small-screen">Stocks</PageTitle>
+          <SearchBar>
+            <Icon>
+              <i className="fas fa-search" />
+            </Icon>
+            <Input
+              placeholder="Search"
+              onChange={({ target }) => setSearchTerm(target.value)}
+              value={searchTerm}
+            />
+          </SearchBar>
+        </Header>
+        <TableContainer>
+          <TickersTable loading={loading} />
+        </TableContainer>
+      </Container>
+    </motion.div>
   );
 };
