@@ -55,7 +55,7 @@ export const ExploreScreen: React.FC = () => {
   return (
     <Container onScroll={onScroll}>
       <Header>
-        <PageTitle>Stocks</PageTitle>
+        <PageTitle className="hide-on-small-screen">Stocks</PageTitle>
         <SearchBar>
           <Icon>
             <i className="fas fa-search" />

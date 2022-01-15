@@ -3,25 +3,33 @@ import { useNavigate, useParams } from 'react-router';
 
 import { useActions } from 'overmind-state';
 
+import StatisticsGrid from 'components/statistics-grid';
 import Initials from 'components/initials';
 import Spinner from 'components/spinner';
+
+import { Capitalize } from 'utils';
 
 import { TickerData } from 'types/types';
 import { PageTitle } from 'mainStyles';
 import {
   Back,
   Container,
+  DataContainer,
+  Details,
   Header,
   Name,
-  NameDetails,
   Overview,
+  Section,
   SpinnerContainer,
+  SubTitle,
+  Text,
   Ticker,
   TickerContainer,
+  Title,
 } from './styles';
 
 export const DetailsScreen: React.FC = () => {
-  const [details, setDetails] = useState<TickerData>();
+  const [tickerData, setTickerData] = useState<TickerData>();
 
   const { ticker } = useParams();
   const { getTickerData } = useActions();
@@ -31,11 +39,11 @@ export const DetailsScreen: React.FC = () => {
     //TODO: handle error
     ticker &&
       getTickerData(ticker).then(({ success, data }) => {
-        if (success) setDetails(data);
+        if (success) setTickerData(data);
       });
   }, [ticker]);
 
-  if (!details)
+  if (!tickerData)
     return (
       <SpinnerContainer>
         <Spinner />
@@ -45,7 +53,7 @@ export const DetailsScreen: React.FC = () => {
   const {
     name,
     branding: { logo_url },
-  } = details;
+  } = tickerData;
   return (
     <Container>
       <Header>
@@ -57,12 +65,29 @@ export const DetailsScreen: React.FC = () => {
       <Overview>
         <TickerContainer>
           <Initials ticker={ticker || ''} logo={logo_url} />
-          <NameDetails>
+          <Section>
             <Ticker>{ticker}</Ticker>
             <Name>{name}</Name>
-          </NameDetails>
+          </Section>
         </TickerContainer>
+        <DataContainer>
+          <Title>Statistics</Title>
+          <StatisticsGrid OHLC={tickerData} />
+        </DataContainer>
       </Overview>
+      <Details>
+        <DataContainer>
+          <Title>About</Title>
+          <Section>
+            <SubTitle>Market</SubTitle>
+            <Text>{Capitalize(tickerData.market)}</Text>
+          </Section>
+          <Section>
+            <SubTitle>Description</SubTitle>
+            <Text>{Capitalize(tickerData.description)}</Text>
+          </Section>
+        </DataContainer>
+      </Details>
     </Container>
   );
 };

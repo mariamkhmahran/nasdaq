@@ -11,9 +11,21 @@ export const Container = styled.div`
   font-size: ${({ theme }) => theme.fontSizeHeader};
   font-family: ${({ theme }) => theme.fonts.semiBold};
   overflow: hidden;
+
+  @media (max-width: ${({ theme }) => theme.widthTablet}) {
+    font-size: ${({ theme }) => theme.fontSizeExtraLarge};
+    width: 100px;
+    height: 100px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.widthMobile}) {
+    font-size: ${({ theme }) => theme.fontSizeExtraLarge};
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const Logo = styled.img`
-  width: 150px;
+  height: 100%;
   object-fit: contain;
 `;

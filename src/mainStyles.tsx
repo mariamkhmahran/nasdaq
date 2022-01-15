@@ -41,6 +41,5 @@ export const PageTitle = styled.div`
 
   @media (max-width: ${({ theme }) => theme.widthMobile}) {
     font-size: ${({ theme }) => theme.fontSizeHeaderMobile};
-    display: none;
   }
 `;
