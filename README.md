@@ -67,7 +67,7 @@ Here's an overview of the root directory tree:
 All content is built to adjust smoothly to various screen sizes.
 
 
-<img src="https://user-images.githubusercontent.com/36322674/149665433-c5984fae-e69b-4861-82e7-82696271ed12.png" height="400" > <img src="https://user-images.githubusercontent.com/36322674/149665448-150c2577-f56e-40a1-ae54-0fd95ad8a9a7.png" width="700" >
+<img src="https://user-images.githubusercontent.com/36322674/149665433-c5984fae-e69b-4861-82e7-82696271ed12.png" height="350" > <img src="https://user-images.githubusercontent.com/36322674/149665448-150c2577-f56e-40a1-ae54-0fd95ad8a9a7.png" width="500" >
 
 ## Deployment
 
