@@ -2,6 +2,7 @@
 
 ## Overview
 Nasdaq app is a stock market app that allows you to browse all stocks listed in Nasdaq exchange with their ticker, name, and details.
+You can view the app here: https://mariamkhmahran.github.io/nasdaq
 
 ## Technologies
 
@@ -46,16 +47,22 @@ Here's an overview of the root directory tree
   - Splash Screen.
     
   - Explore Screen:
-    - Explore a list of all stocks listed in Nasdaq exchange. click on any of the stocks for further details.
+       
+       *Explore a list of all stocks listed in Nasdaq exchange. click on any of the stocks for further details.*
     
   - Details Screen:
-    - Learn more about the stocks and their daily open, high, low, and close (OHLC) values.
+       
+       *Learn more about the stocks and their daily open, high, low, and close (OHLC) values.*
   
   **Error Screens:**
   
   - 404 Not Found.
 
   - Something went wrong.
+
+## Deployment
+
+The app was deployed and hosted on github pages. you can view the live version [here](https://mariamkhmahran.github.io/nasdaq/).
 
 ## Development Setup
 
