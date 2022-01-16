@@ -8,8 +8,6 @@ import DetailsScreen from 'screens/details-screen';
 import { NotFound } from 'screens/not-found/NotFound';
 import { ErrorScreen } from 'screens/error-screen/errorScreen';
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || '';
-
 const AppRoutes: React.FC = () => (
   <AnimatePresence exitBeforeEnter>
     <Routes>
@@ -17,7 +15,7 @@ const AppRoutes: React.FC = () => (
       <Route path={PATHS.detailsScreen} element={<DetailsScreen />} />
       <Route path={PATHS.errorScreen} element={<ErrorScreen />} />
       <Route path="/" element={<Navigate to={PATHS.exploreScreen} />} />
-      <Route path={BASE_URL} element={<Navigate to={PATHS.exploreScreen} />} />
+      <Route path={'/nasdaq'} element={<Navigate to={PATHS.exploreScreen} />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </AnimatePresence>
