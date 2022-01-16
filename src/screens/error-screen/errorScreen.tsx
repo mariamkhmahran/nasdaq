@@ -25,7 +25,7 @@ export const ErrorScreen: React.FC = () => {
       transition={{ type: 'keyframes' }}
     >
       <Container>
-        <Icon className="fas fa-exclamation" />
+        <Icon className="fas fa-exclamation hide-on-small-screen" />
         <Body>
           <Text>
             <Word>

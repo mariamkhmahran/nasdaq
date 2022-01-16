@@ -30,6 +30,10 @@ export const Word = styled.div`
   flex-direction: row;
   align-items: center;
   font-size: ${({ theme }) => theme.fontSizeExtraLarge};
+
+  @media (max-width: ${({ theme }) => theme.widthMobile}) {
+    font-size: ${({ theme }) => theme.fontSizeBody};
+  }
 `;
 
 export const FlatBtton = styled.div`
