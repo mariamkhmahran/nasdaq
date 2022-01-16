@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/nasdaq/static/css/main.061eec9e.css",
-    "main.js": "/nasdaq/static/js/main.466581bb.js",
+    "main.js": "/nasdaq/static/js/main.b0cc2932.js",
     "index.html": "/nasdaq/index.html",
     "static/media/nasdaq-white.svg": "/nasdaq/static/media/nasdaq-white.3d840557fa8ec5ad99053541b80851b9.svg",
     "main.061eec9e.css.map": "/nasdaq/static/css/main.061eec9e.css.map",
-    "main.466581bb.js.map": "/nasdaq/static/js/main.466581bb.js.map"
+    "main.b0cc2932.js.map": "/nasdaq/static/js/main.b0cc2932.js.map"
   },
   "entrypoints": [
     "static/css/main.061eec9e.css",
-    "static/js/main.466581bb.js"
+    "static/js/main.b0cc2932.js"
   ]
 }
