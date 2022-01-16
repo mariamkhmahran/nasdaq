@@ -26,7 +26,7 @@ The web app is a React app built on `create-react-app`.
 
 ### Root directory
 
-Here's an overview of the root directory tree
+Here's an overview of the root directory tree:
 
 ```
 ./src/
@@ -36,7 +36,7 @@ Here's an overview of the root directory tree
   - overmind-state/ // overmind state and configuration
   - screens/ // app's main screens
   - types/ // global types
-  - utils/ // global fuunctions
+  - utils/ // global functions
 ```
 
 - `screens/`
@@ -48,7 +48,7 @@ Here's an overview of the root directory tree
     
   - Explore Screen:
        
-       *Explore a list of all stocks listed in Nasdaq exchange. click on any of the stocks for further details.*
+       *Explore a list of all stocks listed in Nasdaq exchange. Click on any of the stocks for further details.*
     
   - Details Screen:
        
@@ -62,11 +62,11 @@ Here's an overview of the root directory tree
 
 ## Deployment
 
-The app was deployed and hosted on github pages. you can view the live version [here](https://mariamkhmahran.github.io/nasdaq/).
+The app was deployed and hosted on Github pages. you can view the live version [here](https://mariamkhmahran.github.io/nasdaq/).
 
 ## Development Setup
 
-To run the appp locally for development follow the next steps:
+To run the app locally for development follow the next steps:
 
 1. Clone the repository.
 2. Change your directory to **nasdaq** by running `cd nasdaq`
