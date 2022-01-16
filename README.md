@@ -20,6 +20,8 @@ The stack includes:
 ### API
 [Polygon](https://polygon.io/docs) API was used to get all the data about the tickers and their open/close details
 
+*note: the app is using polygon's **Free plan** which only allows 5 requests/minute. When the app reaches this limit, an error screen will be shown.*
+
 ## Architecture
 
 The web app is a React app built on `create-react-app`.
