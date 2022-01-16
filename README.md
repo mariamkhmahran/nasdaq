@@ -2,6 +2,7 @@
 
 ## Overview
 Nasdaq app is a stock market app that allows you to browse all stocks listed in Nasdaq exchange with their ticker, name, and details.
+You can view the app here: https://mariamkhmahran.github.io/nasdaq
 
 ## Technologies
 
@@ -19,13 +20,15 @@ The stack includes:
 ### API
 [Polygon](https://polygon.io/docs) API was used to get all the data about the tickers and their open/close details
 
+*note: the app is using polygon's **Free plan** which only allows 5 requests/minute. When the app reaches this limit, an error screen will be shown.*
+
 ## Architecture
 
 The web app is a React app built on `create-react-app`.
 
 ### Root directory
 
-Here's an overview of the root directory tree
+Here's an overview of the root directory tree:
 
 ```
 ./src/
@@ -35,7 +38,7 @@ Here's an overview of the root directory tree
   - overmind-state/ // overmind state and configuration
   - screens/ // app's main screens
   - types/ // global types
-  - utils/ // global fuunctions
+  - utils/ // global functions
 ```
 
 - `screens/`
@@ -46,10 +49,12 @@ Here's an overview of the root directory tree
   - Splash Screen.
     
   - Explore Screen:
-    - Explore a list of all stocks listed in Nasdaq exchange. click on any of the stocks for further details.
+       
+       *Explore a list of all stocks listed in Nasdaq exchange. Click on any of the stocks for further details.*
     
   - Details Screen:
-    - Learn more about the stocks and their daily open, high, low, and close (OHLC) values.
+       
+       *Learn more about the stocks and their daily open, high, low, and close (OHLC) values.*
   
   **Error Screens:**
   
@@ -57,9 +62,20 @@ Here's an overview of the root directory tree
 
   - Something went wrong.
 
+## Responsive Design
+
+All content is built to adjust smoothly to various screen sizes.
+
+
+<img src="https://user-images.githubusercontent.com/36322674/149665433-c5984fae-e69b-4861-82e7-82696271ed12.png" height="400" > <img src="https://user-images.githubusercontent.com/36322674/149665448-150c2577-f56e-40a1-ae54-0fd95ad8a9a7.png" width="700" >
+
+## Deployment
+
+The app was deployed and hosted on Github pages. you can view the live version [here](https://mariamkhmahran.github.io/nasdaq/).
+
 ## Development Setup
 
-To run the appp locally for development follow the next steps:
+To run the app locally for development follow the next steps:
 
 1. Clone the repository.
 2. Change your directory to **nasdaq** by running `cd nasdaq`
