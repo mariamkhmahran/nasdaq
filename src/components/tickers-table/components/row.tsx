@@ -7,6 +7,8 @@ type TableRowProps = {
   data?: Ticker;
 };
 
+const BASE_URL = process.env.REACT_APP_BASE_URL || '';
+
 export const TableRow: React.FC<TableRowProps> = ({ data }: TableRowProps) => {
   const navigate = useNavigate();
 
@@ -15,7 +17,7 @@ export const TableRow: React.FC<TableRowProps> = ({ data }: TableRowProps) => {
   const { ticker, name, currency_name, primary_exchange } = data;
 
   return (
-    <Row onClick={() => navigate(`/nasdaq/details/${ticker}`)}>
+    <Row onClick={() => navigate(`${BASE_URL}/details/${ticker}`)}>
       <Cell bold>{ticker}</Cell>
       <Cell large>{name}</Cell>
       <Cell className="hide-on-small-screen">{currency_name}</Cell>
