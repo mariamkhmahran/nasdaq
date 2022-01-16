@@ -48,8 +48,8 @@ export const ExploreScreen: React.FC = () => {
   const getNext = async () => {
     setSentRequest(true);
     await loadTickers(apiOptions)
-      .then(({ error }) => {
-        if (error) navigate(PATHS.errorScreen);
+      .then(({ error, status }) => {
+        if (error) navigate(PATHS.errorScreen, { state: { status } });
       })
       .finally(() => setSentRequest(false));
   };

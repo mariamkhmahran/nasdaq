@@ -19,7 +19,7 @@ export interface TickersResponse<T = never> {
   request_id?: string;
   results?: T;
   error?: string;
-  status: 'OK' | 'ERROR';
+  status: 'OK' | 'ERROR' | number;
 }
 
 export interface TickerDetails extends Ticker {

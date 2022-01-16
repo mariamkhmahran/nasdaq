@@ -34,6 +34,7 @@ interface ActionResult<T = never> {
   success: boolean;
   error?: string;
   data?: T;
+  status?: 'OK' | 'ERROR' | number;
 }
 
 export type setOnSplashScreen = (context: Context, loading: boolean) => void;

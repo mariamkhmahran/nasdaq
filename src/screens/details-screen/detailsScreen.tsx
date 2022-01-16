@@ -39,8 +39,8 @@ export const DetailsScreen: React.FC = () => {
 
   useEffect(() => {
     ticker &&
-      getTickerData(ticker).then(({ error, success, data }) => {
-        if (error || !data) navigate(PATHS.errorScreen);
+      getTickerData(ticker).then(({ error, success, data, status }) => {
+        if (error || !data) navigate(PATHS.errorScreen, { state: { status } });
 
         if (success) setTickerData(data);
       });

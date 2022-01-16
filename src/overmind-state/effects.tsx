@@ -44,7 +44,10 @@ export const api: Api = {
       .then((response) => response.data)
       .catch((err: Error | AxiosError) => {
         const message = Axios.isAxiosError(err) ? err.response?.data.error : err.message;
-        return { status: 'ERROR', error: message };
+        return {
+          status: (err as AxiosError).response?.status || 'ERROR',
+          error: message,
+        };
       });
   },
   getTickerDetails: async (ticker) => {
@@ -52,7 +55,10 @@ export const api: Api = {
       .then(fetchOpenClose)
       .catch((err: Error | AxiosError) => {
         const message = Axios.isAxiosError(err) ? err.response?.data.error : err.message;
-        return { status: 'ERROR', error: message };
+        return {
+          status: (err as AxiosError).response?.status || 'ERROR',
+          error: message,
+        };
       });
   },
 };
@@ -81,7 +87,7 @@ const fetchOpenClose = async (response: TickersResponse<TickerDetails>) => {
 
   const ticker = tickerDetails?.ticker;
 
-  // polygon does not support queries from 2022 (as of the day I rote this)
+  // polygon does not support queries from 2022 (as of the day I wrote this)
   // as a quick fix I'll fetch previous day's data
   // FIXME: get current data
   const path = `/aggs/ticker/${ticker}/prev`;

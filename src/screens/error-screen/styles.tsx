@@ -42,3 +42,7 @@ export const FlatBtton = styled.div`
   gap: 10px;
   margin-top: 50px;
 `;
+
+export const Explaination = styled.div`
+  font-size: ${({ theme }) => theme.fontSizeSmall};
+`;
